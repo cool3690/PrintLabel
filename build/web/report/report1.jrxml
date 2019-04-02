@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4a4a758-fe9e-44fb-aa42-b9695ee7e8ca">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT* FROM send]]>
+	</queryString>
+	<field name="youad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="youad">
+		<groupExpression><![CDATA[$F{youad}]]></groupExpression>
+	</group>
+	<group name="name">
+		<groupExpression><![CDATA[$F{name}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="572" splitType="Stretch">
+			<textField>
+				<reportElement x="227" y="231" width="19" height="341" uuid="640a0b6c-7d09-41c4-8f26-cd23d2f74e3f"/>
+				<textElement textAlignment="Center">
+					<font fontName="標楷體" size="20" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				<paragraph lineSpacing="Proportional" lineSpacingSize="3"/>
+                                </textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="10" height="572" uuid="baf0c2bf-49ee-41fa-9fdb-dc0f13a08ee4"/>
+				<textElement textAlignment="Center">
+					<font fontName="標楷體" size="15" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{youad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

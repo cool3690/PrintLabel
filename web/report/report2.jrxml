@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="66bcff9a-c515-4481-97cf-6df2ac4d7cd7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM send]]>
+	</queryString>
+	<field name="myad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="youad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="myad">
+		<groupExpression><![CDATA[$F{myad}]]></groupExpression>
+	</group>
+	<group name="youad">
+		<groupExpression><![CDATA[$F{youad}]]></groupExpression>
+	</group>
+	<group name="name">
+		<groupExpression><![CDATA[$F{name}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="649" splitType="Stretch">
+			<textField>
+				<reportElement x="377" y="65" width="18" height="508" uuid="d9d1d865-a54f-42eb-a438-045183c38ce7"/>
+				<textElement textAlignment="Center">
+					<font fontName="標楷體" size="24" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{youad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="244" width="19" height="381" uuid="61a43f27-da07-4035-afd1-69648a42ec8f"/>
+				<textElement textAlignment="Center">
+					<font fontName="標楷體" size="24" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

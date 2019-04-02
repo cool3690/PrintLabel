@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rrr" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="de8bf30f-a505-46ed-8d52-cb8ee7d42c96">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="38"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT* from send]]>
+	</queryString>
+	<field name="youad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="youad">
+		<groupExpression><![CDATA[$F{youad}]]></groupExpression>
+	</group>
+	<group name="name">
+		<groupExpression><![CDATA[$F{name}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="12" width="555" height="49" uuid="fa5d0d95-6c5b-4897-9f12-5ebc3d1933dd"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{youad}.length()<10 ? <paragraph lineSpacing="Proportional" lineSpacingSize="1.4"/> :
+<paragraph lineSpacing="Proportional" lineSpacingSize="0.4"/> ]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="74" width="383" height="37" uuid="bb7d4e05-0944-4d47-8f37-555928367639"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{youad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
