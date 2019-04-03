@@ -9,18 +9,23 @@
 <%@ include file = "db.jsp"%> 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <% 
- 
+ /*
        String Lang3="";
       Object sql1=session.getAttribute("Lang2"); 
       
+       if(sql1!=null){Lang3=sql1.toString();}益良
+  */
+     String Lang3="";
+      Object sql1=session.getAttribute("Lang2"); 
+      
        if(sql1!=null){Lang3=sql1.toString();}
-  
-    
-	  //  String sql = "select * from send where name like '益良%' ";
-          //String sql = "select * from send where name='n2' ";
-       
-	    ResultSet rs = stmt.executeQuery(Lang3);             
-            File reportFile = new File(application.getRealPath("/report/report3.jasper"));
+  //String sql = "select * from send where c_id = 'A0015' and c_id = 'A0015'";
+ 
+	    ResultSet rs = stmt.executeQuery(Lang3);  
+           
+	 //   String sql = "select * from send where name like '益良%' ";
+              
+             File reportFile = new File(application.getRealPath("/report/r.jasper"));
             Map parameters = new HashMap();
            JRDataSource dataSource = new JRResultSetDataSource(rs);
              byte[] bytes = JasperRunManager.runReportToPdf(reportFile.getPath(), parameters, dataSource); 

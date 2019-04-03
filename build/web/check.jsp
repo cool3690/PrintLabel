@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file = "db.jsp"%> 
 <!DOCTYPE html>
@@ -30,9 +31,11 @@
     <tbody id="myTable">
         <%     
            String Lang2="";
+          
       Object sql1=session.getAttribute("sql"); 
       
        if(sql1!=null){Lang2=sql1.toString();}
+      
            request.setCharacterEncoding("UTF-8");
           String sql = "select * from send"; 
             pstmt = conn.prepareStatement(Lang2);  
@@ -55,10 +58,10 @@
 <form name="selection" >
 <p> 紙張大小：  
 <select name="time" size="1" id="time" > 
-<option value="1" selected>信件（小）</option> 
-<option value="2">信件（大）</option> 
+<option value="1" selected>信件列印</option> 
+<option value="2">--</option> 
 </select> 
-     <input type = "submit" name = "check" value = "確認"  class="btn btn-success"> 
+     <input type = "submit" name = "check" value = "確認" class="btn btn-success"> 
 </form>
 
 </div>
@@ -67,11 +70,16 @@ if(request.getParameter("check") != null )
            { String i = request.getParameter("time");
             if(i.equals("1")){ 
                 session.setAttribute("Lang2", Lang2);
-                response.sendRedirect("show.jsp");
+                %>
+           <script>  window.open("show.jsp"); </script> 
+                <%//   
             }
               else
                 { session.setAttribute("Lang2", Lang2);
-                  response.sendRedirect("showy.jsp");
+
+                %>
+               <script>  window.open("showy.jsp"); </script>
+                <%  
                 }
 	   } 
 
@@ -87,7 +95,7 @@ $(document).ready(function(){
 });
 </script>
     </br><center>
-    <!-- <font size="5">  <a href="index.jsp">首頁</a></font>-->
+     <font size="5">  <a href="index.jsp">回首頁</a></font>
     </body>
 </html>
 

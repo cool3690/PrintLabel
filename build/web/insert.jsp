@@ -3,7 +3,7 @@
 <%@ page import="java.util.logging.Logger" %>
 <%@ page import="java.util.logging.Level" %>
 <%@ page import="org.apache.log4j.*" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file = "db.jsp"%> 
 <!DOCTYPE html>
@@ -51,10 +51,10 @@
             PropertyConfigurator.configure("../WEB-INF/log4j.properties");
 Logger log = Logger.getLogger(this.getClass().toString());
 
-   FileHandler fileHandler = new FileHandler("C:/Log/insert.log");
+   //FileHandler fileHandler = new FileHandler("../Log/insert.log");
   
-     fileHandler.setLevel(Level.INFO); //Log的層級
-	    log.addHandler(fileHandler);
+    // fileHandler.setLevel(Level.INFO); //Log的層級
+	 //   log.addHandler(fileHandler);
         %> 
   
        <%  request.setCharacterEncoding("UTF-8");

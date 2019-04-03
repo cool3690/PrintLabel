@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="830" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fc728310-0e4f-47f2-ad5a-e3bfe04d524b">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="207"/>
+	<property name="ireport.y" value="102"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT* from send]]>
 	</queryString>
@@ -36,7 +36,7 @@
 	<detail>
 		<band height="790" splitType="Stretch">
 			<textField>
-				<reportElement x="325" y="284" width="20" height="479" uuid="a6aca51c-0f4d-484d-911b-88e6abc8cd38"/>
+				<reportElement x="324" y="284" width="20" height="479" uuid="a6aca51c-0f4d-484d-911b-88e6abc8cd38"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="標楷體" size="26" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
 					<paragraph lineSpacing="Proportional" lineSpacingSize="1.1"/>
@@ -65,12 +65,13 @@
 				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="325" y="758" width="33" height="32" uuid="940fad7f-bea4-4476-9464-8418262a6e9d"/>
+				<reportElement x="322" y="758" width="33" height="32" uuid="940fad7f-bea4-4476-9464-8418262a6e9d"/>
 				<textElement textAlignment="Justified" markup="none">
 					<font fontName="標楷體" size="24" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[收]]></text>
 			</staticText>
+			
 		</band>
 	</detail>
 </jasperReport>

@@ -41,9 +41,9 @@ $(document).ready(function(){
      <% 
          PropertyConfigurator.configure("../WEB-INF/log4j.properties");
       Logger log = Logger.getLogger(this.getClass().toString());
-   FileHandler fileHandler = new FileHandler("C:/Log/update.log");
-   fileHandler.setLevel(Level.INFO); //Log的層級
-	    log.addHandler(fileHandler);
+  // FileHandler fileHandler = new FileHandler("/Log/update.log");
+   //fileHandler.setLevel(Level.INFO); //Log的層級
+	   // log.addHandler(fileHandler);
      %>
      <%     request.setCharacterEncoding("UTF-8");
              int i=0,len=0;

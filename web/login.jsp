@@ -1,10 +1,10 @@
+<%@page import="java.io.File"%>
 <%@ page import="java.util.logging.FileHandler" %>
 <%@ page import=" java.util.logging.LogManager" %>
 <%@ page import="java.util.logging.Logger" %>
 <%@ page import="java.util.logging.Level" %>
 <%@ page import="org.apache.log4j.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ include file = "db.jsp"%> 
 
 <!DOCTYPE html>
@@ -52,11 +52,15 @@
        String pwd = request.getParameter("pwd");
     PropertyConfigurator.configure("../WEB-INF/log4j.properties");
 Logger log = Logger.getLogger(this.getClass().toString());
+String A= "V:/Log";      //把路徑給A
 
-   FileHandler fileHandler = new FileHandler("C:/Log/test.log");
+File B=new File(A);          //建立實體
+
+B.mkdir();              
+ // FileHandler fileHandler = new FileHandler("/Web Pages/Log/login.log");
   
-     fileHandler.setLevel(Level.INFO); //Log的層級
-	    log.addHandler(fileHandler);
+     //fileHandler.setLevel(Level.INFO); //Log的層級
+	 //   log.addHandler(fileHandler);
             if(acc!=null){log.info("account="+acc+" pwd="+pwd);
             }
 

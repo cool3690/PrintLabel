@@ -19,9 +19,9 @@
       Object sql1=session.getAttribute("Lang2"); 
       
        if(sql1!=null){Lang3=sql1.toString();}
-  
+     // String sql = "select * from send where c_id = 'A0000' ";
 	    ResultSet rs = stmt.executeQuery(Lang3);  
-	 //   String sql = "select * from send where name like '益良%' ";
+	
               
             File reportFile = new File(application.getRealPath("/report/report4.jasper"));
             Map parameters = new HashMap();

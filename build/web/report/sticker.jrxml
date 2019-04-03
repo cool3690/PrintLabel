@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" columnCount="9" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="90" columnSpacing="1" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="0dd970d6-f806-4840-b94d-1fa72ac4eb5f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select* from send]]>
+	</queryString>
+	<field name="code" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="youad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="youad2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="code">
+		<groupExpression><![CDATA[$F{code}]]></groupExpression>
+	</group>
+	<group name="name">
+		<groupExpression><![CDATA[$F{name}]]></groupExpression>
+	</group>
+	<group name="youad">
+		<groupExpression><![CDATA[$F{youad}]]></groupExpression>
+	</group>
+	<group name="youad2">
+		<groupExpression><![CDATA[$F{youad2}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="300" splitType="Stretch">
+			<textField>
+				<reportElement x="14" y="11" width="14" height="252" uuid="3bb01f3c-dbe2-4d34-b9de-a1bc9df7f1a1"/>
+				<textElement>
+					<font fontName="標楷體" size="18" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-V" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="36" y="5" width="51" height="20" uuid="cf746347-359f-4075-bfdc-80306e663645"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="26" width="8" height="250" uuid="799cb4f9-d215-411c-aecf-e2c941e88263"/>
+				<textElement>
+					<font fontName="標楷體" size="10" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-V" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{youad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="26" width="9" height="250" uuid="61bb6daa-b53d-429a-a63a-4dede6b3d2e5"/>
+				<textElement>
+					<font fontName="標楷體" size="10" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-V" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{youad2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

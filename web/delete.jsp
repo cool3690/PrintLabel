@@ -36,10 +36,10 @@
            PropertyConfigurator.configure("../WEB-INF/log4j.properties");
 Logger log = Logger.getLogger(this.getClass().toString());
 
-   FileHandler fileHandler = new FileHandler("C:/Log/delete.log");
+  // FileHandler fileHandler = new FileHandler("/Log/delete.log");
   
-     fileHandler.setLevel(Level.INFO); //Log的層級
-	    log.addHandler(fileHandler);
+     //fileHandler.setLevel(Level.INFO); //Log的層級
+	//    log.addHandler(fileHandler);
           
            
          if(request.getParameter("delete") != null && a!=null)

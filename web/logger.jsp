@@ -22,7 +22,7 @@
    // PropertyConfigurator.configure(request.getRealPath("WEB-INF/log4j.properties"));this.getClass()
     PropertyConfigurator.configure("../WEB-INF/log4j.properties");
 Logger log = Logger.getLogger(this.getClass().toString());
-   FileHandler fileHandler = new FileHandler("C:/Log/test.log");
+   FileHandler fileHandler = new FileHandler("/Log/test.log");
 	    fileHandler.setLevel(Level.INFO); //Log的層級
 	    log.addHandler(fileHandler);
 log.info("this is INFO.");
